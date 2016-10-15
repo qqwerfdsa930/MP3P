@@ -27,3 +27,12 @@
 *.exe
 *.out
 *.app
+
+# Test Files
+*.mp3
+.\lib
+.\obj
+.\bin
+bass.*
+*.depend
+*.layout
