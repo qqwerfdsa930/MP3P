@@ -6,6 +6,7 @@
 #include <string>
 #include <sstream>
 #include "windows.h"
+#include "UI.h"
 
 class Timer
 {
@@ -27,7 +28,8 @@ public:
 	bool stopSignal;
 	void getMin();
 	void getSec();
-
+    UI ui;
+    bool ifStop;
 
 };
 

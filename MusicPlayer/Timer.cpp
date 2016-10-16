@@ -14,20 +14,31 @@ Timer::~Timer()
 
 void Timer::showTime()
 {
-    while (!stopSignal)
+    while(!ifStop)
     {
-
-
+        std::string minOut, secOut;
         tData.sec++;
-
         if (tData.sec == 60)
         {
             tData.min++;
             tData.sec = 0;
         }
-        clk = std::to_string(tData.min) + " : " + std::to_string(tData.sec);
+        minOut = std::to_string(tData.min);
+        if(tData.min < 10)
+            minOut.insert(0, 1, '0');
+        ui.write(minOut, {10, 5});
+        ui.write(" : ", {13, 5});
+        secOut = std::to_string(tData.sec);
+        if(tData.sec < 10)
+            secOut.insert(0, 1, '0');
+        ui.write(secOut, {17, 5});
+
         waitForNextSec();
-        std::cout << clk << std::endl;
+    }
+    if(ifStop)
+    {
+        tData.min = 0;
+        tData.sec = 0;
     }
 }
 

@@ -40,6 +40,8 @@
 		<Unit filename="MP3Player.h" />
 		<Unit filename="Timer.cpp" />
 		<Unit filename="Timer.h" />
+		<Unit filename="UI.cpp" />
+		<Unit filename="UI.h" />
 		<Unit filename="bass.dll" />
 		<Unit filename="bass.h" />
 		<Unit filename="lib/bass.lib" />
